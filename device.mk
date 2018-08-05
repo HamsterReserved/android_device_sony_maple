@@ -102,6 +102,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=480 \
     ro.usb.pid_suffix=1F1
 
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/yoshino/platform.mk)
 

@@ -14,15 +14,7 @@
 
 include device/sony/yoshino/PlatformConfig.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := unknown
-ifneq (,$(filter %g8141,$(TARGET_PRODUCT)))
-TARGET_BOOTLOADER_BOARD_NAME := G8141
-else ifneq (,$(filter %g8142,$(TARGET_PRODUCT)))
 TARGET_BOOTLOADER_BOARD_NAME := G8142
-else
-TARGET_BOOTLOADER_BOARD_NAME := G8141
-$(warning Unrecognized value for TARGET_PRODUCT: "$(TARGET_PRODUCT)", using default value: "$(TARGET_BOOTLOADER_BOARD_NAME)")
-endif
 
 # Platform
 PRODUCT_PLATFORM := yoshino
